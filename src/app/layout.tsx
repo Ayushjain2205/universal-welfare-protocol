@@ -16,7 +16,7 @@ export default function RootLayout({
   const { width } = useWindowDimensions();
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-100`}>
+      <body className={`${inter.className} p-[27px] bg-[#FEFEFE]`}>
         <WalletProvider>
           {width <= 768 ? (
             children
