@@ -22,6 +22,18 @@ const Create = () => {
         </div>
         <div className="flex flex-col gap-[28px]">
           <p className="text-[20px] font-medium">Tell us about you</p>
+          <div className="flex flex-col">
+            <label htmlFor="firstName" className="mb-[8px] ">
+              First name
+            </label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="Shweta Arora"
+              className="p-2 border border-black rounded-[6px]"
+            />
+          </div>
         </div>
       </div>
     </>

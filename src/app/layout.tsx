@@ -14,6 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const { width } = useWindowDimensions();
+
   return (
     <html lang="en">
       <body className={`${inter.className} p-[27px] bg-[#FEFEFE]`}>
