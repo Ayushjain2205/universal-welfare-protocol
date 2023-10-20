@@ -1,6 +1,6 @@
 "use client";
 import { Work_Sans } from "next/font/google";
-import "./lib/ui/globals.css";
+import "./global.css";
 import { WalletProvider } from "./modules/wallet/services/context";
 import useWindowDimensions from "./utils/useWindowDimension";
 
