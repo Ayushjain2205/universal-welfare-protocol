@@ -1,10 +1,10 @@
 "use client";
-import { Inter } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./lib/ui/globals.css";
 import { WalletProvider } from "./modules/wallet/services/context";
 import useWindowDimensions from "./utils/useWindowDimension";
 
-const inter = Inter({
+const inter = Work_Sans({
   subsets: ["latin"],
 });
 
