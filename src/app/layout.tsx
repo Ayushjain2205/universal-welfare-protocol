@@ -18,7 +18,8 @@ export default function RootLayout({
   const router = useRouter();
   const pathname = usePathname();
 
-  const isVerifiedRoute = pathname === "/verified" || "/";
+  const isVerifiedRoute = pathname === "/verified" || pathname === "/";
+
   const bodyClass = `${inter.className} ${
     !isVerifiedRoute ? "p-[27px]" : ""
   } bg-[#FEFEFE]`;
