@@ -39,7 +39,16 @@ const IDverification = () => {
           </label>
           <div className="flex flex-row items-center p-2 h-[155px] border border-black rounded-[6px]">
             <div className="flex items-center justify-center w-1/2">
-              <img src="/icons/upload.svg" alt="Upload Icon" />
+              <label htmlFor="aadharFront">
+                <img src="/icons/upload.svg" alt="Upload Icon" />
+              </label>
+              <input
+                type="file"
+                id="aadharFront"
+                name="aadharFront"
+                className="hidden"
+                accept="image/*"
+              />
             </div>
             <div className="flex flex-col items-center justify-center w-1/2">
               <img src="/images/aadhar-front.png" alt="Aadhar Front" />
@@ -57,7 +66,16 @@ const IDverification = () => {
           </label>
           <div className="flex flex-row items-center p-2 h-[155px] border border-black rounded-[6px]">
             <div className="flex items-center justify-center w-1/2">
-              <img src="/icons/upload.svg" alt="Upload Icon" />
+              <label htmlFor="aadharBack">
+                <img src="/icons/upload.svg" alt="Upload Icon" />
+              </label>
+              <input
+                type="file"
+                id="aadharBack"
+                name="aadharBack"
+                className="hidden"
+                accept="image/*"
+              />
             </div>
             <div className="flex flex-col items-center justify-center w-1/2">
               <img src="/images/aadhar-back.png" alt="Aadhar Front" />
