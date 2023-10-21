@@ -1,4 +1,5 @@
 "use client";
+import { useRouter, usePathname } from "next/navigation";
 import { Work_Sans } from "next/font/google";
 import "./global.css";
 import { WalletProvider } from "./modules/wallet/services/context";
@@ -14,10 +15,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const { width } = useWindowDimensions();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const isVerifiedRoute = pathname === "/verified";
+  const bodyClass = `${inter.className} ${
+    !isVerifiedRoute ? "p-[27px]" : ""
+  } bg-[#FEFEFE]`;
 
   return (
     <html lang="en">
-      <body className={`${inter.className} p-[27px] bg-[#FEFEFE]`}>
+      <body className={bodyClass}>
         <WalletProvider>
           {width <= 768 ? (
             children
