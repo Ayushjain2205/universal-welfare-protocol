@@ -32,9 +32,45 @@ const IDverification = () => {
             className="p-2 h-[48px] border border-black rounded-[6px]"
           />
         </div>
+
+        <div className="flex flex-col">
+          <label htmlFor="firstName" className="mb-[8px] text-[14px]">
+            Upload AADHAR card front
+          </label>
+          <div className="flex flex-row items-center p-2 h-[155px] border border-black rounded-[6px]">
+            <div className="flex items-center justify-center w-1/2">
+              <img src="/icons/upload.svg" alt="Upload Icon" />
+            </div>
+            <div className="flex flex-col items-center justify-center w-1/2">
+              <img src="/images/aadhar-front.png" alt="Aadhar Front" />
+              <p className="text-[8px] text-[#9E9E9E] w-[107px] mt-2">
+                Upload a picture which is clear, preferably in natural sunlight
+                without shadow
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col">
+          <label htmlFor="firstName" className="mb-[8px] text-[14px]">
+            Upload AADHAR card back
+          </label>
+          <div className="flex flex-row items-center p-2 h-[155px] border border-black rounded-[6px]">
+            <div className="flex items-center justify-center w-1/2">
+              <img src="/icons/upload.svg" alt="Upload Icon" />
+            </div>
+            <div className="flex flex-col items-center justify-center w-1/2">
+              <img src="/images/aadhar-back.png" alt="Aadhar Front" />
+              <p className="text-[8px] text-[#9E9E9E] w-[107px] mt-2">
+                Upload a picture which is clear, preferably in natural sunlight
+                without shadow
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="flex flex-row justify-center mt-[60px] mb-[30px]">
+      <div className="flex flex-row justify-center mt-[50px] mb-[30px]">
         <button className="w-[213px] h-[48px] rounded-[8px] bg-[#1A2DD9] text-white">
           Submit
         </button>
