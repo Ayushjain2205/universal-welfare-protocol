@@ -34,11 +34,11 @@ function ConnectWallet({
       return (
         <>
           <Icons.spinner className="h-6 w-6 animate-spin" />
-          {"Getting wallet..."}
+          {"Creating Universal ID..."}
         </>
       );
     } else {
-      return "Get your Wallet";
+      return "Create Universal ID";
     }
   };
 
@@ -47,7 +47,7 @@ function ConnectWallet({
       {!connectionError ? (
         <button
           disabled={isConnecting || isConnected || !!connectionError}
-          className="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100 disabled:bg-white"
+          className="flex items-center justify-center gap-x-2.5 px-[38px] py-[16px] font-medium text-white hover:bg-gray-100 disabled:bg-white text-[16px]"
           onClick={connect}
         >
           {getTextButton()}
