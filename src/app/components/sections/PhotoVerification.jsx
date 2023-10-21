@@ -3,46 +3,6 @@
 const PhotoVerification = () => {
   console.log("PhotoVerification component function start");
 
-  const camera = useRef(null);
-  const errorMessages = {
-    noCameraAccessible:
-      "No camera device accessible. Please connect your camera or try a different browser.",
-    permissionDenied:
-      "Permission denied. Please refresh and give camera permission.",
-    switchCamera:
-      "It is not possible to switch camera to different one because there is only one video device accessible.",
-    canvas: "Canvas is not supported.",
-  };
-
-  const videoConstraints = {
-    facingMode: { exact: "user" },
-  };
-
-  useEffect(() => {
-    console.log("Hello without camera access");
-  }, []);
-
-  useEffect(() => {
-    console.log("Hello");
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices
-        .getUserMedia({ video: true })
-        .then(function (stream) {
-          console.log("Camera access granted");
-          // Optionally, if you want to display the camera stream in a video tag:
-          const videoElement = document.querySelector("#testVideo");
-          if (videoElement) {
-            videoElement.srcObject = stream;
-          }
-        })
-        .catch(function (err) {
-          console.error("Camera access error:", err);
-        });
-    } else {
-      console.error("Browser does not support camera access");
-    }
-  }, []);
-
   return (
     <div className="flex flex-col">
       <div className="top flex flex-row justify-end mb-[40px]">
