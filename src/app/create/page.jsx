@@ -9,11 +9,11 @@ import Verification from "../components/sections/Verification";
 const Create = () => {
   return (
     <>
-      {/* <About /> */}
+      <About />
       {/* <Nominee /> */}
       {/* <IDverification /> */}
       {/* <PhotoVerification /> */}
-      <Verification />
+      {/* <Verification /> */}
     </>
   );
 };

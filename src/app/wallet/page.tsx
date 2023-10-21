@@ -15,7 +15,7 @@ export default function App() {
   const [transactionSuccess, setTransactionSuccess] = useState(false);
 
   return (
-    <div className="flex flex-col p-[27px]">
+    <div className="flex flex-col">
       <div className="top flex flex-row justify-end mb-[40px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
