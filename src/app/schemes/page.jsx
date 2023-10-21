@@ -97,9 +97,28 @@ const Scehemes = () => {
       </div>
 
       <div className="flex flex-col gap-[31px] mt-[45px]">
-        <Scheme />
-        <Scheme />
-        <Scheme />
+        <Scheme
+          name="Rashtriya Swasthya Bima Yojana"
+          category="Health Insurance"
+          image="/images/scheme1.png"
+        />
+
+        <Scheme
+          name="RATION CARD : NFSA"
+          category="Food"
+          image="/images/scheme2.png"
+        />
+
+        <Scheme
+          name="ITC : VOCATIONAL TRAINING"
+          category="Education"
+          image="/images/scheme3.png"
+        />
+        <Scheme
+          name="Dhirubhai Ambani Hospital "
+          category="Health"
+          image="/images/scheme4.png"
+        />
       </div>
     </div>
   );

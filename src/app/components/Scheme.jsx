@@ -1,14 +1,14 @@
 import React from "react";
 
-const Scheme = () => {
+const Scheme = ({ name, image, category }) => {
   return (
     <div className="flex flex-col w-[336px] h-[289px] border border-black rounded-[6px]">
       <div className="flex flex-col items-center justify-center h-[186px]">
-        <img src="/images/scheme1.png" alt="" />
+        <img src={image} alt="" />
       </div>
       <div className="flex flex-col p-[12px]">
-        <p className="font-medium">Rashtriya Swasthya Bima Yojana</p>
-        <p className="mt-[6px] text-[#7A7A7A] text-[14px]">Health Insurance</p>
+        <p className="font-medium">{name}</p>
+        <p className="mt-[6px] text-[#7A7A7A] text-[14px]">{category}</p>
         <div className="flex flex-row gap-[5px] mt-[16px]">
           <span>
             <svg
