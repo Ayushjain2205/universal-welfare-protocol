@@ -23,17 +23,102 @@ const Create = () => {
         <div className="flex flex-col gap-[28px]">
           <p className="text-[20px] font-medium">Tell us about you</p>
           <div className="flex flex-col">
-            <label htmlFor="firstName" className="mb-[8px] ">
+            <label htmlFor="firstName" className="mb-[8px] text-[14px]">
               First name
             </label>
             <input
               type="text"
               id="firstName"
               name="firstName"
-              placeholder="Shweta Arora"
-              className="p-2 border border-black rounded-[6px]"
+              className="p-2 h-[48px] border border-black rounded-[6px]"
             />
           </div>
+          <div className="flex flex-col">
+            <label htmlFor="lastName" className="mb-[8px] text-[14px]">
+              Last name
+            </label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              className="p-2 h-[48px] border border-black rounded-[6px]"
+            />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="dob" className="mb-[8px] text-[14px]">
+              Date of birth
+            </label>
+            <input
+              type="date"
+              id="dob"
+              name="dob"
+              className="p-2 h-[48px] border border-black rounded-[6px]"
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-[28px] mt-[60px]">
+          <p className="text-[20px] font-medium">About your work</p>
+          <div className="flex flex-col">
+            <label htmlFor="jobtitle" className="mb-[8px] text-[14px]">
+              Job Title
+            </label>
+            <input
+              type="text"
+              id="jobtitle"
+              name="jobtitle"
+              className="p-2 h-[48px] border border-black rounded-[6px]"
+            />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="years" className="mb-[8px] text-[14px]">
+              Years
+            </label>
+            <input
+              type="text"
+              id="years"
+              name="years"
+              className="p-2 h-[48px] border border-black rounded-[6px]"
+            />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="amount" className="mb-[8px] text-[14px]">
+              Salary
+            </label>
+            <select
+              id="amount"
+              name="amount"
+              className="p-2 h-[48px] border border-black rounded-[6px] appearance-none"
+            >
+              <option value="5000">5000 - 50000</option>
+              <option value="50000">50000 - 1 lakh</option>
+              <option value="100000">1 lakh - 5 lakh</option>
+              <option value="500000">5lakh - 20 lakh</option>
+              <option value="2000000">20 lakh +</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="flex flex-row items-center gap-[8px] text-[#3277F5] mt-[28px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M8 0C8.26522 0 8.51957 0.105357 8.70711 0.292893C8.89464 0.48043 9 0.734784 9 1V7H15C15.2652 7 15.5196 7.10536 15.7071 7.29289C15.8946 7.48043 16 7.73478 16 8C16 8.26522 15.8946 8.51957 15.7071 8.70711C15.5196 8.89464 15.2652 9 15 9H9V15C9 15.2652 8.89464 15.5196 8.70711 15.7071C8.51957 15.8946 8.26522 16 8 16C7.73478 16 7.48043 15.8946 7.29289 15.7071C7.10536 15.5196 7 15.2652 7 15V9H1C0.734784 9 0.48043 8.89464 0.292893 8.70711C0.105357 8.51957 0 8.26522 0 8C0 7.73478 0.105357 7.48043 0.292893 7.29289C0.48043 7.10536 0.734784 7 1 7H7V1C7 0.734784 7.10536 0.48043 7.29289 0.292893C7.48043 0.105357 7.73478 0 8 0V0Z"
+              fill="#3277F5"
+            />
+          </svg>
+          Add another work
+        </div>
+
+        <div className="flex flex-row justify-center mt-[60px] mb-[40px]">
+          <button className="w-[213px] h-[48px] rounded-[8px] bg-[#1A2DD9] text-white">
+            Save & Continue
+          </button>
         </div>
       </div>
     </>
