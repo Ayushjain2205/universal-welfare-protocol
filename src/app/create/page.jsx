@@ -4,7 +4,7 @@ import About from "../components/sections/About";
 import Nominee from "../components/sections/Nominee";
 import IDverification from "../components/sections/IDverification";
 import PhotoVerification from "../components/sections/PhotoVerification";
-import Cameraview from "../components/Cameraview";
+import Verification from "../components/sections/Verification";
 
 const Create = () => {
   return (
@@ -12,8 +12,8 @@ const Create = () => {
       {/* <About /> */}
       {/* <Nominee /> */}
       {/* <IDverification /> */}
-      <PhotoVerification />
-      {/* <Cameraview /> */}
+      {/* <PhotoVerification /> */}
+      <Verification />
     </>
   );
 };
