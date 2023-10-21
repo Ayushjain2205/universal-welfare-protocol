@@ -4,15 +4,19 @@ import Card from "../components/Card";
 const Verified = () => {
   return (
     <div className="relative">
-      {/* Added relative positioning */}
       <img
         className="absolute top-[-100px] w-[940px] h-[775px]"
         src="/images/scribble.svg"
         alt=""
       />
-      {/* Positioned Card absolutely with a top margin of 105px */}
-      <div className="absolute top-[105px] flex justify-center w-full">
+      <div className="absolute top-[105px] flex flex-col items-center w-full">
         <Card />
+        <button className="mt-[70px] bg-[#262626] px-[14px] py-[10px] text-[16px] text-white font-medium rounded-[8px] ">
+          Explore schemes
+        </button>
+        <button className="mt-[30px] text-[#3277F5] text-[16px]">
+          Print your card
+        </button>
       </div>
     </div>
   );
