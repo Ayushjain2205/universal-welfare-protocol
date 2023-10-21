@@ -4,6 +4,7 @@ const nextConfig = {
   experimental: {
     esmExternals: "loose",
   },
+  requiresDevicePermission: ["camera"],
 };
 
 module.exports = nextConfig;
