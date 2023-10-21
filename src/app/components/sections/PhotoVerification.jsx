@@ -1,6 +1,4 @@
 "use client";
-import React, { useRef, useEffect } from "react";
-import { Camera } from "react-camera-pro";
 
 const PhotoVerification = () => {
   console.log("PhotoVerification component function start");
