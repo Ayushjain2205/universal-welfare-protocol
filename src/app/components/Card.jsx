@@ -1,8 +1,9 @@
 import React from "react";
+import QRCode from "react-qr-code";
 
 const Card = () => {
   return (
-    <div className="flex flex-col p-[20px] h-[367px] w-[335px] bg-[#1A2DD9] rounded-[20px]">
+    <div className="relative flex flex-col p-[20px] h-[367px] w-[335px] bg-[#1A2DD9] rounded-[20px]">
       <div className="flex flex-row justify-between items-center">
         <span className="text-[20px] font-semibold text-white">Raj Arora</span>
         <svg
@@ -44,6 +45,9 @@ const Card = () => {
         <p className="w-[100px] text-[12px] mt-[54px] text-[#FFFFFF99]">
           DB Woods Gokuldham Goregaon East Mumbai 400063 Maharashtra
         </p>
+      </div>
+      <div className="absolute bottom-[12px] right-[20px]">
+        <QRCode size={85} value="472372301036" />
       </div>
     </div>
   );
