@@ -1,7 +1,14 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Scheme from "../components/Scheme";
 
 const Scehemes = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  function handleClick() {
+    console.log("here");
+    setIsOpen(false);
+  }
   return (
     <div className="flex flex-col">
       <div className="top flex flex-row justify-end mb-[40px]">
@@ -22,7 +29,12 @@ const Scehemes = () => {
       </div>
       <div className="flex flex-col gap-[30px]">
         <p className="text-[24px] font-medium">Hello, Raj</p>
-        <div className="flex flex-row items-center justify-between rounded-[6px] px-[12px] py-[17px] bg-[#1A2DD9] h-[72px] w-[336px]">
+
+        <div
+          id="uid"
+          onClick={() => setIsOpen(true)}
+          className="flex flex-row items-center justify-between rounded-[6px] px-[12px] py-[17px] bg-[#1A2DD9] h-[72px] w-[336px]"
+        >
           <div className="flex flex-row items-center gap-[8px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -120,6 +132,18 @@ const Scehemes = () => {
           image="/images/scheme4.png"
         />
       </div>
+      {isOpen && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="bg-white p-8 rounded shadow-lg z-10">
+            <button onClick={handleClick} className="float-right">
+              Close
+            </button>
+            <h2 className="text-xl mb-4">Dialog Content</h2>
+            <p>This is the content of the dialog overlay.</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
