@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Nominee = () => {
   return (
@@ -57,9 +58,11 @@ const Nominee = () => {
       </div>
 
       <div className="flex flex-row justify-center mt-[60px] mb-[30px]">
-        <button className="w-[213px] h-[48px] rounded-[8px] bg-[#1A2DD9] text-white">
-          Save & Continue
-        </button>
+        <Link href="/create/id">
+          <button className="w-[213px] h-[48px] rounded-[8px] bg-[#1A2DD9] text-white">
+            Save & Continue
+          </button>
+        </Link>
       </div>
       <div className="text-[#3277F5] text-[16px] flex justify-center">Skip</div>
     </div>

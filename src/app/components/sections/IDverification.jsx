@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const IDverification = () => {
   return (
@@ -89,9 +90,11 @@ const IDverification = () => {
       </div>
 
       <div className="flex flex-row justify-center mt-[50px] mb-[30px]">
-        <button className="w-[213px] h-[48px] rounded-[8px] bg-[#1A2DD9] text-white">
-          Submit
-        </button>
+        <Link href="/create/photo">
+          <button className="w-[213px] h-[48px] rounded-[8px] bg-[#1A2DD9] text-white">
+            Submit
+          </button>
+        </Link>
       </div>
     </div>
   );

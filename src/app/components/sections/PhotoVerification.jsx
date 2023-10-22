@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 const PhotoVerification = () => {
   console.log("PhotoVerification component function start");
 
@@ -59,9 +59,11 @@ const PhotoVerification = () => {
       </div>
 
       <div className="flex flex-row justify-center mt-[60px] mb-[40px]">
-        <button className="w-[213px] h-[48px] rounded-[8px] bg-[#1A2DD9] text-white">
-          Submit
-        </button>
+        <Link href="/create/verification">
+          <button className="w-[213px] h-[48px] rounded-[8px] bg-[#1A2DD9] text-white">
+            Submit
+          </button>
+        </Link>
       </div>
     </div>
   );

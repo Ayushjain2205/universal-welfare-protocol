@@ -18,7 +18,7 @@ export default function App() {
 
   useEffect(() => {
     if (isConnected) {
-      router.push("/create");
+      router.push("/create/about");
     }
   }, [isConnected]);
   return (
