@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 import Verification from "../../components/sections/Verification";
-const page = () => {
+const Page = () => {
   const router = useRouter();
 
   useEffect(() => {
@@ -21,4 +21,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
