@@ -30,6 +30,7 @@ const Nominee = () => {
             type="text"
             id="firstName"
             name="firstName"
+            value="Shweta Arora"
             className="p-2 h-[48px] border border-black rounded-[6px]"
           />
         </div>
@@ -41,6 +42,7 @@ const Nominee = () => {
             type="text"
             id="lastName"
             name="lastName"
+            value="02/09/1970"
             className="p-2 h-[48px] border border-black rounded-[6px]"
           />
         </div>
@@ -52,6 +54,7 @@ const Nominee = () => {
             type="text"
             id="dob"
             name="dob"
+            value="87676599001"
             className="p-2 h-[48px] border border-black rounded-[6px] w-full"
           />
         </div>

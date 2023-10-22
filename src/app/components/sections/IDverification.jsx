@@ -30,6 +30,7 @@ const IDverification = () => {
             type="text"
             id="firstName"
             name="firstName"
+            value="9219 0912 9009"
             className="p-2 h-[48px] border border-black rounded-[6px]"
           />
         </div>

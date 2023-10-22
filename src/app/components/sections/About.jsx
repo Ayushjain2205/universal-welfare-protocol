@@ -99,6 +99,7 @@ const About = () => {
             type="text"
             id="years"
             name="years"
+            value="7"
             className="p-2 h-[48px] border border-black rounded-[6px]"
           />
         </div>
@@ -109,7 +110,6 @@ const About = () => {
           <select
             id="amount"
             name="amount"
-            value="7"
             className="p-2 h-[48px] border border-black rounded-[6px] appearance-none"
           >
             <option value="5000">5000 - 50000</option>
