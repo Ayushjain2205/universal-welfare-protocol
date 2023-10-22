@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
+import Webcam from "react-webcam";
 
 // Dynamically import the QrReader component to avoid SSR issues
 const QrReader = dynamic(() => import("react-qr-scanner"), { ssr: false });
@@ -25,11 +26,10 @@ export default function ScanPage() {
         <div className="relative p-4  border-black rounded-md mt-[40px]">
           {/* Your QR Code Image */}
           <QrReader
-            legacyMode={true}
             delay={300}
             onError={handleError}
             onScan={handleScan}
-            facingMode="rear"
+            facingMode="environment"
             style={{ width: "260px", height: "230px" }} // Adjust size as needed
           />
 
