@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Ration = () => {
   return (
@@ -36,11 +37,11 @@ const Ration = () => {
       <div className="flex justify-center">
         <img className="w-[157px] h-[175px]" src="/images/scheme2.png" alt="" />
       </div>
-
-      <button className="bg-[#1A2DD9] rounded-[8px] h-[46px] w-[336px] mt-[46px] text-white text-medium">
-        Opt in
-      </button>
-
+      <Link href="/scan">
+        <button className="bg-[#1A2DD9] rounded-[8px] h-[46px] w-[336px] mt-[46px] text-white text-medium">
+          Opt in
+        </button>
+      </Link>
       <p className="text-[20px] mt-[30px] font-medium">RATION CARD : NFSA</p>
       <p className="text-[14px] text-[#7A7A7A] mt-[12px] ">Food</p>
       <p className="mt-[27px] w-[336px] text-[14px]">
