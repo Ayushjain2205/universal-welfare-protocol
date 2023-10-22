@@ -25,6 +25,7 @@ export default function ScanPage() {
         <div className="relative p-4  border-black rounded-md mt-[40px]">
           {/* Your QR Code Image */}
           <QrReader
+            legacyMode={true}
             delay={300}
             onError={handleError}
             onScan={handleScan}
