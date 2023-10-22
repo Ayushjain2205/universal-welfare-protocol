@@ -32,7 +32,13 @@ export default function ScanPage() {
             facingMode="environment"
             style={{ width: "260px", height: "230px" }} // Adjust size as needed
           /> */}
-          <Webcam />
+          <Webcam
+            videoConstraints={{
+              width: 230,
+              height: 230,
+              facingMode: "environment",
+            }}
+          />
 
           {/* Top Left Corner */}
           <div className="absolute top-0 left-0 ">
