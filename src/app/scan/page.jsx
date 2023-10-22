@@ -25,13 +25,14 @@ export default function ScanPage() {
 
         <div className="relative p-4  border-black rounded-md mt-[40px]">
           {/* Your QR Code Image */}
-          <QrReader
+          {/* <QrReader
             delay={300}
             onError={handleError}
             onScan={handleScan}
             facingMode="environment"
             style={{ width: "260px", height: "230px" }} // Adjust size as needed
-          />
+          /> */}
+          <Webcam />
 
           {/* Top Left Corner */}
           <div className="absolute top-0 left-0 ">
