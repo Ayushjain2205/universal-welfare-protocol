@@ -28,7 +28,8 @@ export default function ScanPage() {
             delay={300}
             onError={handleError}
             onScan={handleScan}
-            style={{ width: "230px", height: "230px" }} // Adjust size as needed
+            facingMode="environment"
+            style={{ width: "260px", height: "230px" }} // Adjust size as needed
           />
 
           {/* Top Left Corner */}
