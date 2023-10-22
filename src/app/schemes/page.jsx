@@ -1,13 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Scheme from "../components/Scheme";
+import Card from "../components/Card";
 
 const Scehemes = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   function handleClick() {
     console.log("here");
-    setIsOpen(false);
+    setIsOpen(!isOpen);
   }
   return (
     <div className="flex flex-col">
@@ -134,13 +135,26 @@ const Scehemes = () => {
       </div>
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="bg-white p-8 rounded shadow-lg z-10">
-            <button onClick={handleClick} className="float-right">
-              Close
+          <div className="absolute inset-0 bg-white opacity-80"></div>
+          <div className="flex flex-col justify-center gap-[100px]">
+            <Card />
+            <button
+              className="m-auto flex flex-col items-center justify-center rounded-full h-[48px] w-[48px] bg-[#272727] z-40"
+              onClick={() => setIsOpen(false)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M1.29279 1.29308C1.48031 1.10561 1.73462 1.00029 1.99979 1.00029C2.26495 1.00029 2.51926 1.10561 2.70679 1.29308L7.99979 6.58608L13.2928 1.29308C13.385 1.19757 13.4954 1.12139 13.6174 1.06898C13.7394 1.01657 13.8706 0.988985 14.0034 0.987831C14.1362 0.986677 14.2678 1.01198 14.3907 1.06226C14.5136 1.11254 14.6253 1.18679 14.7192 1.28069C14.8131 1.37458 14.8873 1.48623 14.9376 1.60913C14.9879 1.73202 15.0132 1.8637 15.012 1.99648C15.0109 2.12926 14.9833 2.26048 14.9309 2.38249C14.8785 2.50449 14.8023 2.61483 14.7068 2.70708L9.41378 8.00008L14.7068 13.2931C14.8889 13.4817 14.9897 13.7343 14.9875 13.9965C14.9852 14.2587 14.88 14.5095 14.6946 14.6949C14.5092 14.8803 14.2584 14.9855 13.9962 14.9878C13.734 14.99 13.4814 14.8892 13.2928 14.7071L7.99979 9.41408L2.70679 14.7071C2.51818 14.8892 2.26558 14.99 2.00339 14.9878C1.74119 14.9855 1.49038 14.8803 1.30497 14.6949C1.11956 14.5095 1.01439 14.2587 1.01211 13.9965C1.00983 13.7343 1.11063 13.4817 1.29279 13.2931L6.58579 8.00008L1.29279 2.70708C1.10532 2.51955 1 2.26525 1 2.00008C1 1.73492 1.10532 1.48061 1.29279 1.29308Z"
+                  fill="white"
+                />
+              </svg>
             </button>
-            <h2 className="text-xl mb-4">Dialog Content</h2>
-            <p>This is the content of the dialog overlay.</p>
           </div>
         </div>
       )}
