@@ -1,19 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useWalletAuth } from "../modules/wallet/hooks/useWalletAuth";
 import ConnectWallet from "../components/ConnectWallet";
 import { Transaction } from "../components/Transaction";
 import Confetti from "react-confetti";
 import { useWindowSize } from "../lib/ui/hooks/useWindowSize";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function App() {
   const { isConnecting, isConnected, connect, connectionError, wallet } =
     useWalletAuth();
   const { width: windowWidth, height: windowHeight } = useWindowSize();
   const [transactionSuccess, setTransactionSuccess] = useState(false);
+  const router = useRouter();
 
+  useEffect(() => {
+    if (isConnected) {
+      router.push("/create");
+    }
+  }, [isConnected]);
   return (
     <div className="flex flex-col">
       <div className="top flex flex-row justify-end mb-[40px]">
@@ -37,35 +44,33 @@ export default function App() {
           Let’s create your ID
         </p>
       </div>
-      <div className="flex flex-col mb-[40px]">
-        <label htmlFor="firstName" className="mb-[8px] text-[14px]">
-          Mobile number
-        </label>
-        <input
-          type="text"
-          id="firstName"
-          name="firstName"
-          className="p-2 h-[48px] border border-black rounded-[6px]"
-        />
-      </div>
-      <div className="flex flex-col gap-[28px] items-center">
-        <div className="bg-[#1A2DD9] rounded-[8px] w-[233px]">
-          <ConnectWallet
-            isConnected={isConnected}
-            isConnecting={isConnecting}
-            connect={connect}
-            connectionError={connectionError}
-            wallet={wallet!}
-          />
-        </div>
-        {isConnected && (
-          <Link href="create">
-            <button className="w-[213px] h-[48px] rounded-[8px] bg-[#1A2DD9] text-white">
-              Create Profile
-            </button>
-          </Link>
-        )}
-      </div>
+      {!isConnected && (
+        <>
+          <div className="flex flex-col mb-[40px]">
+            <label htmlFor="mobileNumber" className="mb-[8px] text-[14px]">
+              Mobile number
+            </label>
+            <input
+              type="text"
+              id="mobileNumber"
+              name="mobileNumber"
+              className="p-2 h-[48px] border border-black rounded-[6px]"
+            />
+          </div>
+
+          <div className="flex flex-col gap-[28px] items-center">
+            <div className="bg-[#1A2DD9] rounded-[8px] w-[233px]">
+              <ConnectWallet
+                isConnected={isConnected}
+                isConnecting={isConnecting}
+                connect={connect}
+                connectionError={connectionError}
+                wallet={wallet!}
+              />
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }
