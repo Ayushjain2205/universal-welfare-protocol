@@ -10,6 +10,33 @@ const Scehemes = () => {
     console.log("here");
     setIsOpen(!isOpen);
   }
+
+  const schemes = [
+    {
+      name: "Rashtriya Swasthya Bima Yojana",
+      category: "Health Insurance",
+      image: "/images/scheme1.png",
+      link: "/ration",
+    },
+    {
+      name: "RATION CARD : NFSA",
+      category: "Food",
+      image: "/images/scheme2.png",
+      link: "/ration",
+    },
+    {
+      name: "ITC : VOCATIONAL TRAINING",
+      category: "Education",
+      image: "/images/scheme3.png",
+      link: "/ration",
+    },
+    {
+      name: "Dhirubhai Ambani Hospital",
+      category: "Health",
+      image: "/images/scheme4.png",
+      link: "/health",
+    },
+  ];
   return (
     <div className="flex flex-col">
       <div className="top flex flex-row justify-end mb-[40px]">
@@ -110,29 +137,17 @@ const Scehemes = () => {
       </div>
 
       <div className="flex flex-col gap-[31px] mt-[45px]">
-        <Scheme
-          name="Rashtriya Swasthya Bima Yojana"
-          category="Health Insurance"
-          image="/images/scheme1.png"
-        />
-
-        <Scheme
-          name="RATION CARD : NFSA"
-          category="Food"
-          image="/images/scheme2.png"
-        />
-
-        <Scheme
-          name="ITC : VOCATIONAL TRAINING"
-          category="Education"
-          image="/images/scheme3.png"
-        />
-        <Scheme
-          name="Dhirubhai Ambani Hospital "
-          category="Health"
-          image="/images/scheme4.png"
-        />
+        {schemes.map((scheme, index) => (
+          <Scheme
+            key={index}
+            name={scheme.name}
+            category={scheme.category}
+            image={scheme.image}
+            link={scheme.link}
+          />
+        ))}
       </div>
+
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="absolute inset-0 bg-white opacity-80"></div>
